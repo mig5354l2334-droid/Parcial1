@@ -5,6 +5,15 @@ public class Habitaciones {
     private String tipo;
     private int cantidad_noches;
 
+    public Habitaciones(String nombre, int numero, double tarifa_base, String tipo, int cantidad_noches){
+        this.nombre = nombre;
+        this.numero = numero;
+        this.tarifa_base = tarifa_base;
+        this.tipo = tipo;
+        this.cantidad_noches = cantidad_noches;
+
+    }
+
     public String getNombre() {
         return nombre;
     }

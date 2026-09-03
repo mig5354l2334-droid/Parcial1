@@ -1,12 +1,12 @@
 public class Reserva {
-    private Habitaciones[] reserva;
+    private Habitaciones[] habitaciones;
     private int id;
     private static final int max_habitaciones = 5;
     private int contador;
 
     public Reserva(int id){
     this.id = id;
-    reserva = new Habitaciones[max_habitaciones];
+    habitaciones = new Habitaciones[max_habitaciones];
     contador = 0;
     }
 
@@ -24,10 +24,11 @@ public class Reserva {
             System.out.println("Habitaciones maximas registradas");
         return false;}
         else
-        reserva[contador] = habitacion;
+        habitaciones[contador] = habitacion;
         contador ++;
         return true;}
 
-
-
+    public Habitaciones[] getReserva() {
+        return habitaciones;
+    }
 }
