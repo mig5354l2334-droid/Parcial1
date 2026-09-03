@@ -24,8 +24,17 @@ public class Habitaciones {
     public int getCantidad_noches() {
         return cantidad_noches;
     }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Habitaciones otro = (Habitaciones) obj;
+        return this.numero == otro.numero;
+    }
 
-    public void setCantidad_noches(int cantidad_noches) {
-        this.cantidad_noches = cantidad_noches;
+    @Override
+    public int hashCode() {
+        return Integer.hashCode(numero);
     }
 }
+
